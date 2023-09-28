@@ -87,6 +87,23 @@
         </nav>
       </div>
     </header>
+
+    <!-- Login window (initially hidden) -->
+    <div id="loginWindow" class="hidden">
+      <!-- Login form content -->
+      <form id="loginForm" style="text-align: center;" action="{{url_for('index')}}"  method="post">
+        <h2>Anmeldung</h2>
+        <div class="form-group">
+            <!-- <label for="username">Benutzername:</label> -->
+            <input type="text" id="username" name="username" placeholder="Benutzername eingeben" required>
+        </div>
+        <div class="form-group">
+            <!-- <label for="password">Passwort:</label> -->
+            <input type="password" id="password" name="password" placeholder="Passwort eingeben" required>
+        </div>
+        <button type="submit" style="border-radius: 2px;">Login</button>
+      </form>
+    </div>
     <!-- end header section -->
   </div>
 
@@ -176,19 +193,19 @@
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Herderstraße 11, 22085 Hamburg
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  +01 1234567890
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  kkproduction@info.de
                 </span>
               </a>
             </div>
@@ -214,7 +231,7 @@
               Info
             </h4>
             <p>
-              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+              MediAI ist eine führende Kraft im Bereich künstliche Intelligenz und Medienproduktion. Wir sind spezialisiert auf die Anwendung von fortschrittlichen AI-Technologien, um hochwertige Medieninhalte zu erstellen und zu transformieren.
             </p>
           </div>
         </div>

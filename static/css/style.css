@@ -1133,13 +1133,13 @@ video {
 /* CSS for login window */
 #loginWindow {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 60px; /* Adjust the distance from the header as needed */
   right: 20px;
   background-color: #fff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  z-index: 1;
+  z-index: 1001;
   border-radius: 5px;
 }
 

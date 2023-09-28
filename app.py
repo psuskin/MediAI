@@ -3,6 +3,8 @@ import functools
 
 application = flask.Flask(__name__)
 
+application.secret_key = "bacon"
+
 users = {'Berktug':'123'}
 
 def login_required(method):
@@ -39,7 +41,7 @@ def index():
 
 @application.route("/ai", methods=('GET', 'POST'))
 def ai():
-    return "test"
+    return flask.render_template("ai.html")
 
 if __name__ == '__main__':
     application.run()

@@ -65,107 +65,62 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> Über Uns</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="service.html">Services</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="why.html">Warum Wir</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                <a class="nav-link" href="index.html"> <i class="fa fa-user" aria-hidden="true"></i> Logout</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
-
-    <!-- Login window (initially hidden) -->
-    <div id="loginWindow" class="hidden">
-      <!-- Login form content -->
-      <form id="loginForm" style="text-align: center;" action="{{url_for('index')}}"  method="post">
-        <h2>Anmeldung</h2>
-        <div class="form-group">
-            <!-- <label for="username">Benutzername:</label> -->
-            <input type="text" id="username" name="username" placeholder="Benutzername eingeben" required>
-        </div>
-        <div class="form-group">
-            <!-- <label for="password">Passwort:</label> -->
-            <input type="password" id="password" name="password" placeholder="Passwort eingeben" required>
-        </div>
-        <button type="submit" style="border-radius: 2px;">Login</button>
-      </form>
-    </div>
     <!-- end header section -->
   </div>
 
-  <!-- why section -->
+  <!-- about section -->
 
-  <section class="why_section layout_padding">
-    <div class="container">
+  <section class="about_section layout_padding">
+    <div class="container  ">
       <div class="heading_container heading_center">
         <h2>
-          Warum <span>Wir?</span>
+          Über <span>Uns</span>
         </h2>
+        <p>
+          MediAI ist eine führende Kraft im Bereich künstliche Intelligenz und Medienproduktion. Wir sind spezialisiert auf die Anwendung von fortschrittlichen AI-Technologien, um hochwertige Medieninhalte zu erstellen und zu transformieren. Unser engagiertes Team aus Experten nutzt kreative Algorithmen, um innovative Lösungen für unsere Kunden in den Bereichen Grafikdesign, Videoanimation und Textgenerierung anzubieten. Bei MediAI kombinieren wir Kreativität und Technologie, um eine neue Dimension der Medienproduktion zu schaffen.
+        </p>
       </div>
-      <div class="why_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="/static/images/development_8643306.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Kosteneffizienz
-            </h5>
-            <p>
-              Unsere Firma zu wählen bedeutet, eine kluge finanzielle Entscheidung zu treffen. Wir legen großen Wert auf Kosteneffizienz in all unseren Aktivitäten, damit Sie Ihre Ziele erreichen, ohne Ihr Budget zu überlasten. Mit unseren maßgeschneiderten Lösungen und wettbewerbsfähigen Preisen sparen Sie nicht nur Geld, sondern erhalten auch erstklassigen Service, der den Wert Ihrer Investition maximiert.
-            </p>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box" id="orb">
+            <!-- <img src="/static/images/robot-2301646_1920.jpg" alt=""> -->
+            <canvas id=c></canvas>
           </div>
         </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="/static/images/deep-learning_3896892.png" alt="">
-          </div>
+        <div class="col-md-6">
           <div class="detail-box">
-            <h5>
-              Hochqualitative KI
-            </h5>
+            <h3>
+              Wir Sind MediAI
+            </h3>
             <p>
-              Unsere hochqualitative KI-Lösung ist nicht nur technisch beeindruckend, sondern auch wirtschaftlich sinnvoll. Wir bieten Spitzenleistung zu wettbewerbsfähigen Preisen, was bedeutet, dass Sie von fortschrittlicher Technologie profitieren können, ohne Ihr Budget zu sprengen. Wählen Sie uns und erleben Sie die perfekte Balance zwischen Qualität und Kosteneffizienz.
+              Wir sind MediAI – eine dynamische Kraft im Bereich künstliche Intelligenz und Medienkreation. Unser Herz schlägt für Innovation und Kreativität, und wir setzen modernste AI-Technologien ein, um die Grenzen dessen, was in der Medienproduktion möglich ist, zu erweitern.
             </p>
+            <p>
+              Unser Team aus hochqualifizierten Fachleuten vereint Kunst und Wissenschaft, um fesselnde visuelle Inhalte, beeindruckende Videos und maßgeschneiderte Texte zu generieren. Wir glauben fest daran, dass die Zukunft der Medienproduktion in der Zusammenarbeit zwischen Mensch und Maschine liegt.
+            </p>
+            <p>
+              Mit einem starken Fokus auf Qualität und Kundenzufriedenheit sind wir bestrebt, die Erwartungen unserer Kunden zu übertreffen und ihre Visionen in die Realität umzusetzen. Bei MediAI sind wir mehr als nur eine Firma – wir sind Ihre Partner auf dem Weg zu herausragender Medienkreation und Innovation.
+            </p>
+            <p>
+              Willkommen bei MediAI – wo Kreativität und Technologie Hand in Hand gehen, um die Zukunft der Medien zu gestalten.
+            </p>
+            <a href="about.html">
+              Mehr Lesen
+            </a>
           </div>
         </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="/static/images/growth_5527695.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Konstante Innovation
-            </h5>
-            <p>
-              Unsere kontinuierliche Innovationskraft ist der Schlüssel zur Zukunftsfähigkeit Ihres Unternehmens. Wir setzen auf ständige Weiterentwicklung und gestalten fortlaufend neue Möglichkeiten für Ihren Erfolg. Mit uns wählen Sie nicht nur einen Anbieter, sondern einen Wegbereiter für nachhaltige Innovation, der gleichzeitig Ihre Kosten im Blick behält.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="why.html">
-          Mehr Lesen
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- end why section -->
+  <!-- end about section -->
 
   <!-- info section -->
 
@@ -287,6 +242,7 @@
   </script>
   <!-- custom js -->
   <script type="text/javascript" src="/static/js/custom.js"></script>
+  <script type="text/javascript" src="/static/js/orb.js"></script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
