@@ -91,7 +91,7 @@
     <!-- Login window (initially hidden) -->
     <div id="loginWindow" class="hidden">
       <!-- Login form content -->
-      <form id="loginForm" style="text-align: center;">
+      <form id="loginForm" style="text-align: center;" action="{{url_for('index')}}"  method="post">
         <h2>Anmeldung</h2>
         <div class="form-group">
             <!-- <label for="username">Benutzername:</label> -->
@@ -102,7 +102,7 @@
             <input type="password" id="password" name="password" placeholder="Passwort eingeben" required>
         </div>
         <button type="submit" style="border-radius: 2px;">Login</button>
-    </form>
+      </form>
     </div>
     <!-- end header section -->
 
