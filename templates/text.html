@@ -1,0 +1,29 @@
+<html lang="en-US"><head>
+<title>Berktug's Text Generation</title>
+
+<head>
+<script src="jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <p>test</p>
+</body>
+
+<script>
+const url = 'https://montanaflynn-lorem-text-generator.p.rapidapi.com/word?count=5';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '5178730606mshe8a05288fa4ff24p17fa82jsn39fe62530684',
+		'X-RapidAPI-Host': 'montanaflynn-lorem-text-generator.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+</script>
