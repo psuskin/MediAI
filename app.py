@@ -43,5 +43,21 @@ def index():
 def ai():
     return flask.render_template("ai.html")
 
+@application.route("/about", methods=('GET', 'POST'))
+def about():
+    return flask.render_template("about.html")
+
+@application.route("/service", methods=('GET', 'POST'))
+def service():
+    return flask.render_template("service.html")
+
+@application.route("/why", methods=('GET', 'POST'))
+def why():
+    return flask.render_template("why.html")
+
+@application.route("/team", methods=('GET', 'POST'))
+def team():
+    return flask.render_template("team.html")
+
 if __name__ == '__main__':
     application.run()
