@@ -1148,3 +1148,9 @@ video {
   border: none;
   cursor: pointer;
 }
+
+#generatedContent {
+  width: 50%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center horizontally by setting margins to "auto" */
+  text-align: center; /* Center text content within the div */
+}

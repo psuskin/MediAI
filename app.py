@@ -40,6 +40,7 @@ def index():
     return flask.render_template("index.html")
 
 @application.route("/ai", methods=('GET', 'POST'))
+@login_required
 def ai():
     return flask.render_template("ai.html")
 

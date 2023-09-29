@@ -78,146 +78,73 @@
   <!-- about section -->
 
   <section class="about_section layout_padding">
-    <div class="container  ">
-      <div class="heading_container heading_center">
-        <h2>
-          Über <span>Uns</span>
-        </h2>
-        <p>
-          MediAI ist eine führende Kraft im Bereich künstliche Intelligenz und Medienproduktion. Wir sind spezialisiert auf die Anwendung von fortschrittlichen AI-Technologien, um hochwertige Medieninhalte zu erstellen und zu transformieren. Unser engagiertes Team aus Experten nutzt kreative Algorithmen, um innovative Lösungen für unsere Kunden in den Bereichen Grafikdesign, Videoanimation und Textgenerierung anzubieten. Bei MediAI kombinieren wir Kreativität und Technologie, um eine neue Dimension der Medienproduktion zu schaffen.
-        </p>
+    <div class="container  " style="max-width: none; display: flex; justify-content: space-between;">
+      <div style="width: 20%;">
+        <img src="/static/images/colorful-parrot-with-black-beak-yellow-green-feathers.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/vertical-shot-fox-walking-rocks-forest.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/lamborghini-huracan-is-dark-street-city.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/red-lamborghini-car-sunset-sharp-focus-hyper-realistic-full-hd.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/red-lentil-soup-with-slice-lemon-breadcrumbs.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/various-kebab-with-rice-vegetables.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/koenigsegg-ccxr-edition-track-goodwood-festival-speed (1).jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/koenigsegg-ccxr-edition-track-goodwood-festival-speed.jpg" alt="Generated Image" style="width: 49%;" height="360">
       </div>
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box" id="orb">
-            <!-- <img src="/static/images/robot-2301646_1920.jpg" alt=""> -->
-            <canvas id=c></canvas>
+      <div style="max-width: 40%;">
+        <div class="heading_container heading_center">
+          <h2>
+            Nutze die Kraft der <span>KI</span>
+          </h2>
+          <p>
+            Nutze die Kraft der KI, um deine Möglichkeiten zu erweitern und deinen Horizont zu erweitern. Künstliche Intelligenz revolutioniert die Art und Weise, wie wir Probleme angehen, Informationen verarbeiten und Innovationen vorantreiben. Mit KI an deiner Seite kannst du schneller, intelligenter und effizienter handeln. Entdecke die unendlichen Potenziale und gestalte eine Zukunft, die von Intelligenz und Fortschritt geprägt ist.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 ">
+            <div class="img-box" id="orb">
+              <!-- <img src="/static/images/robot-2301646_1920.jpg" alt=""> -->
+              <canvas id=c></canvas>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail-box">
+              <form id="contentForm" style="text-align: center;">
+                <h3>
+                  Texteingabe
+                </h3>
+                <div class="form-group">
+                    <textarea rows="5" cols="40" id="input" name="input" placeholder="Generierungstext eingeben"></textarea>
+                </div>
+                <div>
+                  <label>
+                      <input type="radio" name="contentType" value="text" checked> Text generieren
+                  </label>
+                </div>
+                <div>
+                  <label>
+                      <input type="radio" name="contentType" value="image"> Bild generieren
+                  </label>
+                </div>
+                <button type="submit" style="border-radius: 2px;">Generieren</button>
+              </form>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              Wir Sind MediAI
-            </h3>
-            <p>
-              Wir sind MediAI – eine dynamische Kraft im Bereich künstliche Intelligenz und Medienkreation. Unser Herz schlägt für Innovation und Kreativität, und wir setzen modernste AI-Technologien ein, um die Grenzen dessen, was in der Medienproduktion möglich ist, zu erweitern.
-            </p>
-            <p>
-              Unser Team aus hochqualifizierten Fachleuten vereint Kunst und Wissenschaft, um fesselnde visuelle Inhalte, beeindruckende Videos und maßgeschneiderte Texte zu generieren. Wir glauben fest daran, dass die Zukunft der Medienproduktion in der Zusammenarbeit zwischen Mensch und Maschine liegt.
-            </p>
-            <p>
-              Mit einem starken Fokus auf Qualität und Kundenzufriedenheit sind wir bestrebt, die Erwartungen unserer Kunden zu übertreffen und ihre Visionen in die Realität umzusetzen. Bei MediAI sind wir mehr als nur eine Firma – wir sind Ihre Partner auf dem Weg zu herausragender Medienkreation und Innovation.
-            </p>
-            <p>
-              Willkommen bei MediAI – wo Kreativität und Technologie Hand in Hand gehen, um die Zukunft der Medien zu gestalten.
-            </p>
-            <a href="{{url_for('about')}}">
-              Mehr Lesen
-            </a>
-          </div>
-        </div>
+        <div id="generatedContent"></div>
+      </div>
+      <div style="width: 20%;">
+        <img src="/static/images/colorful-majestic-waterfall-national-park-forest-during-autumn.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/aerial-view-mountain-covered-fog-beautiful-pink-sky.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/modern-home-design-with-garden-sky-background.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/sofa-living-room-interior-design-zoom-background.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/digital-art-super-villain-with-burning-head.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/photo-illustration-image-picture.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/photo-luxury-yacht-dock.jpg" alt="Generated Image" style="width: 49%;" height="360">
+        <img src="/static/images/luxurious-yacht-sailing-gracefully-across-crystalclear-ocean.jpg" alt="Generated Image" style="width: 49%;" height="360">
       </div>
     </div>
   </section>
 
   <!-- end about section -->
-
-  <!-- info section -->
-
-  <section class="info_section layout_padding2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_contact">
-            <h4>
-              Address
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Herderstraße 11, 22085 Hamburg
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  kkproduction@info.de
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="info_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_detail">
-            <h4>
-              Info
-            </h4>
-            <p>
-              MediAI ist eine führende Kraft im Bereich künstliche Intelligenz und Medienproduktion. Wir sind spezialisiert auf die Anwendung von fortschrittlichen AI-Technologien, um hochwertige Medieninhalte zu erstellen und zu transformieren.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto info_col">
-          <div class="info_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="info_links">
-              <a class="active" href="{{url_for('index')}}">
-                Home
-              </a>
-              <a class="" href="{{url_for('about')}}">
-                Über Uns
-              </a>
-              <a class="" href="{{url_for('service')}}">
-                Services
-              </a>
-              <a class="" href="{{url_for('why')}}">
-                Warum Wir
-              </a>
-              <a class="" href="{{url_for('team')}}">
-                Team
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 info_col ">
-          <h4>
-            Subscribe
-          </h4>
-          <form action="#">
-            <input type="text" placeholder="Enter email" />
-            <button type="submit">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end info section -->
 
   <!-- footer section -->
   <section class="footer_section">
@@ -247,6 +174,29 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const contentForm = document.getElementById("contentForm");
+    const generatedContent = document.getElementById("generatedContent");
+
+    contentForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        // Get the selected content type
+        const contentType = document.querySelector('input[name="contentType"]:checked').value;
+
+        // Generate content based on the selected type
+        if (contentType === "image") {
+            // Generate and display an image (replace with your image generation logic)
+            generatedContent.innerHTML = '<img src="https://api.haxed.net/tmp/6ttXHe0dAT.png" alt="Generated Image">';
+        } else if (contentType === "text") {
+            // Generate and display text (replace with your text generation logic)
+            generatedContent.textContent = "Generated text content.";
+        }
+      });
+    });
+  </script>
 
 </body>
 

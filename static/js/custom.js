@@ -77,55 +77,51 @@ document.getElementById("reviewForm").addEventListener("submit", function (e) {
 });
 
 // JavaScript to handle mute/unmute button
-document.addEventListener("DOMContentLoaded", function () {
-    const backgroundMusic = document.getElementById("backgroundMusic");
-    const muteButton = document.getElementById("muteButton");
-    const muteIcon = document.getElementById("muteIcon");
-    const unmuteIcon = document.getElementById("unmuteIcon");
+const backgroundMusic = document.getElementById("backgroundMusic");
+const muteButton = document.getElementById("muteButton");
+const muteIcon = document.getElementById("muteIcon");
+const unmuteIcon = document.getElementById("unmuteIcon");
 
-    backgroundMusic.volume = 0.4;
+backgroundMusic.volume = 0.4;
 
-    muteButton.addEventListener("click", function () {
-        if (backgroundMusic.paused) {
-            backgroundMusic.play();
-            unmuteIcon.style.display = "none"; // Hide mute icon
-            muteIcon.style.display = "inline-block"; // Show unmute icon
-        } else {
-            backgroundMusic.pause();
-            unmuteIcon.style.display = "inline-block"; // Show mute icon
-            muteIcon.style.display = "none"; // Hide unmute icon
-        }
-    });
-
-
-
-    // Click event handlers for rating bars
-    const ratingBars = document.querySelectorAll(".bar");
-    ratingBars.forEach((bar, index) => {
-        bar.addEventListener("click", function () {
-            const rating = 5 - index; // Map bar index to rating (e.g., 0 -> 5 stars)
-            showReviewsForRating(rating);
-        });
-    });
-
-    // Function to display reviews for a specific rating
-    function showReviewsForRating(rating) {
-        // Show the review list container
-        const reviewListContainer = document.getElementById("reviewListContainer");
-        reviewListContainer.style.display = "block";
+muteButton.addEventListener("click", function () {
+    if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        unmuteIcon.style.display = "none"; // Hide mute icon
+        muteIcon.style.display = "inline-block"; // Show unmute icon
+    } else {
+        backgroundMusic.pause();
+        unmuteIcon.style.display = "inline-block"; // Show mute icon
+        muteIcon.style.display = "none"; // Hide unmute icon
     }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const loginButton = document.getElementById("loginButton");
-    const loginWindow = document.getElementById("loginWindow");
 
-    loginButton.addEventListener("click", function () {
-        // Toggle the visibility of the login window
-        if (loginWindow.style.display === "block") {
-            loginWindow.style.display = "none";
-        } else {
-            loginWindow.style.display = "block";
-        }
+
+// Click event handlers for rating bars
+const ratingBars = document.querySelectorAll(".bar");
+ratingBars.forEach((bar, index) => {
+    bar.addEventListener("click", function () {
+        const rating = 5 - index; // Map bar index to rating (e.g., 0 -> 5 stars)
+        showReviewsForRating(rating);
     });
+});
+
+// Function to display reviews for a specific rating
+function showReviewsForRating(rating) {
+    // Show the review list container
+    const reviewListContainer = document.getElementById("reviewListContainer");
+    reviewListContainer.style.display = "block";
+}
+
+const loginButton = document.getElementById("loginButton");
+const loginWindow = document.getElementById("loginWindow");
+
+loginButton.addEventListener("click", function () {
+    // Toggle the visibility of the login window
+    if (loginWindow.style.display === "block") {
+        loginWindow.style.display = "none";
+    } else {
+        loginWindow.style.display = "block";
+    }
 });
